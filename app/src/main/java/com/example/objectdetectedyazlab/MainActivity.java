@@ -178,9 +178,9 @@ public class MainActivity extends AppCompatActivity {
             String encodedPhotoStr = Base64.encodeToString(byteArrayPhoto, Base64.DEFAULT);
             JSONObject jsonParams = new JSONObject();
             try {
-                jsonParams.put("image", encodedPhotoStr);
-                jsonParams.put("width", Integer.parseInt(width.getText().toString()));
-                jsonParams.put("height", Integer.parseInt(height.getText().toString()));
+                jsonParams.put("resim", encodedPhotoStr);
+                jsonParams.put("genislik", Integer.parseInt(width.getText().toString()));
+                jsonParams.put("uzunluk", Integer.parseInt(height.getText().toString()));
                 StringEntity entity = new StringEntity(jsonParams.toString());
                 asyncHttpClient.post(getApplicationContext(), "https://mysterious-thicket-43904.herokuapp.com/scale", entity, "application/json", new AsyncHttpResponseHandler() {
                     @Override
