@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     public EditText width, height;
     private static final int CAMERA_REQUEST = 1888;
     private static final int MY_CAMERA_PERMISSION_CODE = 100;
-    private final String endpoint = "https://runner-server.herokuapp.com/image";
+    private final String endpoint = "https://....herokuapp.com/image";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
                 jsonParams.put("genislik", Integer.parseInt(width.getText().toString()));
                 jsonParams.put("uzunluk", Integer.parseInt(height.getText().toString()));
                 StringEntity entity = new StringEntity(jsonParams.toString());
-                asyncHttpClient.post(getApplicationContext(), "https://mysterious-thicket-43904.herokuapp.com/scale", entity, "application/json", new AsyncHttpResponseHandler() {
+                asyncHttpClient.post(getApplicationContext(), "https://.../scale", entity, "application/json", new AsyncHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                         String response = new String(responseBody);
